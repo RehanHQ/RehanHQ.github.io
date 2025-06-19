@@ -90,45 +90,23 @@ header {
 }
 
 .social-icons a {
-  position: relative;
+  text-decoration: none;
 }
 
-.social-icons a img.icon,
-.social-icons a .leetcode-icon {
+.social-icons a img {
   height: 26px;
-  width: 26px;
   margin-left: 1rem;
-  object-fit: contain;
-  filter: grayscale(100%) brightness(100%) contrast(100%);
   transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%) brightness(2);
 }
 
-.social-icons a img:hover,
-.social-icons a .leetcode-icon:hover {
+.social-icons a img:hover {
   transform: scale(1.2);
-  filter: grayscale(0%) brightness(120%) contrast(120%);
+  filter: drop-shadow(0 0 6px #00aaff);
 }
 
-/* TOOLTIP */
-.social-icons a::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: -28px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #222;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 4px 8px;
-  border-radius: 4px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.social-icons a:hover::after {
-  opacity: 1;
+.leetcode-icon {
+  height: 22px;
 }
 
 /* SECTIONS */
@@ -224,6 +202,7 @@ header {
 
   .social-icons {
     align-self: flex-end;
+    margin-top: 1rem;
   }
 
   .hero-content h1 {
