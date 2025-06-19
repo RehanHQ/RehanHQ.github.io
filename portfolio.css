@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -109,7 +110,7 @@ header {
   height: 22px;
 }
 
-/* SECTIONS */
+/* SECTION STYLES */
 .section {
   max-width: 1000px;
   margin: auto;
@@ -173,7 +174,7 @@ header {
   text-decoration: underline;
 }
 
-/* ANIMATIONS */
+/* FADE-IN ANIMATION */
 .fade-in {
   animation: fadeIn 0.8s ease-in;
 }
@@ -187,6 +188,18 @@ header {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* SLIDE-IN ANIMATION */
+.slide-in {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease-out;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* RESPONSIVE */
