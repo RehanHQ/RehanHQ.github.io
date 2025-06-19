@@ -1,9 +1,8 @@
 body {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
   background-color: #111;
-  color: white;
-  transition: background 0.3s, color 0.3s;
+  color: #fff;
 }
 
 header {
@@ -11,113 +10,131 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #0c0c0c;
+  background: #0d0d0d;
 }
 
-header h1 {
+header .left {
+  font-size: 1.5rem;
+  font-weight: bold;
   color: #00aaff;
-  margin: 0;
 }
 
-nav {
+nav.center {
   display: flex;
-  align-items: center;
+  gap: 1.5rem;
 }
 
-nav a {
-  color: inherit;
+nav.center a {
+  color: white;
   text-decoration: none;
-  margin: 0 0.75rem;
-  transition: color 0.3s, transform 0.3s;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
-nav a:hover {
-  color: #00aaff;
+nav.center a:hover {
   transform: scale(1.1);
+  color: #00aaff;
 }
 
-.socials {
+.right.socials a {
   margin-left: 1rem;
-}
-
-.socials a {
-  margin-left: 0.5rem;
-  transition: transform 0.3s;
-}
-
-.socials a:hover {
-  transform: scale(1.2);
-}
-
-.container {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-h2 {
-  color: #00aaff;
-  border-bottom: 2px solid #00aaff;
-  display: inline-block;
-  padding-bottom: 0.25rem;
-}
-
-.skill-list li {
-  list-style: none;
-  padding: 0.5rem 0;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.skill-list li:hover {
-  transform: scale(1.05);
-  color: #00aaff;
-}
-
-.project {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: #1a1a1a;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.project:hover {
-  transform: scale(1.02);
-}
-
-.contact-icons a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 1rem;
-  text-decoration: none;
   color: white;
   transition: transform 0.3s;
 }
 
+.right.socials a:hover {
+  transform: scale(1.2);
+  color: #00aaff;
+}
+
+.leetcode-icon {
+  height: 18px;
+  vertical-align: middle;
+  filter: brightness(100);
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section {
+  margin: 3rem 0;
+}
+
+h2 {
+  color: #00aaff;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.skill-list li {
+  background: #1a1a1a;
+  padding: 0.75rem;
+  border-radius: 6px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.skill-list li:hover {
+  transform: translateY(-5px);
+  background: #00aaff;
+  color: #111;
+}
+
+.project {
+  background: #1a1a1a;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  background: #222;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
 .contact-icons a:hover {
-  transform: translateX(5px);
+  transform: translateY(-3px);
   color: #00aaff;
 }
 
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #0c0c0c;
-}
-
-section {
-  margin-bottom: 3rem;
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  background: #0d0d0d;
+  color: #aaa;
+  font-size: 0.9rem;
 }
