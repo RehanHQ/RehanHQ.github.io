@@ -20,10 +20,14 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   text-align: center;
-  padding: 2rem;
-  background: var(--accent);
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #0066cc, #004999);
   color: white;
 }
 
@@ -74,6 +78,7 @@ h2 {
   display: flex;
   gap: 1rem;
   margin-bottom: 1.5rem;
+  align-items: center;
 }
 .project img {
   width: 120px;
