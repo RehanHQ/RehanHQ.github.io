@@ -9,7 +9,7 @@
 <body>
 
   <!-- HERO SECTION -->
-  <section class="hero-section">
+  <section class="hero-section slide-in">
     <div class="hero-content fade-in">
       <h1>Hi, I'm <span>Rehan Haque</span></h1>
       <p>Aspiring Full-Stack & AI Engineer</p>
@@ -27,13 +27,13 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="social-icons">
-      <a href="https://linkedin.com/in/rehan-haque-781909222" target="_blank" title="LinkedIn">
+      <a href="https://linkedin.com/in/rehan-haque-781909222" target="_blank">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
       </a>
-      <a href="https://github.com/RehanHQ" target="_blank" title="GitHub">
+      <a href="https://github.com/RehanHQ" target="_blank">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
       </a>
-      <a href="https://leetcode.com/u/RehanHaque/" target="_blank" title="LeetCode">
+      <a href="https://leetcode.com/u/RehanHaque/" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="leetcode-icon" />
       </a>
     </div>
@@ -41,12 +41,12 @@
 
   <!-- MAIN CONTENT -->
   <main>
-    <section id="about" class="section fade-in">
+    <section id="about" class="section slide-in">
       <h1>About Me</h1>
       <p>I'm a BTech CSE (AI) student with real-world experience in full-stack development, machine learning, and backend systems. I love solving real-world problems with clean and efficient code.</p>
     </section>
 
-    <section id="skills" class="section fade-in">
+    <section id="skills" class="section slide-in">
       <h1>Skills</h1>
       <div class="skills-grid">
         <span>Python</span>
@@ -59,31 +59,45 @@
       </div>
     </section>
 
-    <section id="projects" class="section fade-in">
+    <section id="projects" class="section slide-in">
       <h1>Projects</h1>
       <div class="projects-grid">
-        <div class="project-card">
+        <div class="project-card slide-in">
           <h3>Employee Exam System</h3>
           <p>Online testing system with dashboard, login, result panel built using PHP and MySQL.</p>
         </div>
-        <div class="project-card">
+        <div class="project-card slide-in">
           <h3>Sign Language to Speech</h3>
           <p>Real-time gesture to voice translator using OpenCV and CNN.</p>
         </div>
-        <div class="project-card">
+        <div class="project-card slide-in">
           <h3>EduGPT - AI Homework Helper</h3>
           <p>Upload notes and ask questions offline using embeddings and natural language.</p>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section fade-in">
+    <section id="contact" class="section slide-in">
       <h1>Contact</h1>
       <p><strong>Phone:</strong> <a href="tel:+919932625611">+91 99326 25611</a></p>
       <p><strong>Email:</strong> <a href="mailto:rehanhaque@shooliniuniversity.com">rehanhaque@shooliniuniversity.com</a></p>
       <p><strong>Resume:</strong> <a href="Rehan_Haque_Resume.pdf" download>Download Resume</a></p>
     </section>
   </main>
+
+  <!-- SLIDE IN SCRIPT -->
+  <script>
+    const sliders = document.querySelectorAll('.slide-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sliders.forEach(slide => observer.observe(slide));
+  </script>
 
 </body>
 </html>
