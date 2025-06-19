@@ -34,20 +34,23 @@ header .center a:hover {
   color: #00aaff;
 }
 
-header .right a {
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.icon-img {
+  height: 24px;
   margin-left: 1rem;
-  color: #00aaff;
-  font-size: 1.2rem;
   transition: transform 0.3s ease;
 }
 
-header .right a:hover {
+.icon-img:hover {
   transform: scale(1.2);
 }
 
 .leetcode-icon {
-  height: 18px;
-  vertical-align: middle;
+  height: 22px;
   filter: brightness(0) invert(1);
 }
 
@@ -83,12 +86,13 @@ h2 {
   background: #1e1e1e;
   padding: 0.6rem 1.2rem;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s;
 }
 
 #skills li:hover {
   background: #00aaff;
   color: #000;
+  transform: scale(1.05);
 }
 
 .project-grid {
@@ -137,7 +141,12 @@ h2 {
   header {
     flex-direction: column;
   }
+
   .center {
-    margin-top: 1rem;
+    margin: 1rem 0;
+  }
+
+  .right {
+    justify-content: center;
   }
 }
