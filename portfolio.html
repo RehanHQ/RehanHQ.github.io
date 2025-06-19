@@ -2,76 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rehan Haque | Portfolio</title>
-  <link rel="stylesheet" href="portfolio.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Rehan Haque</h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/rehan-haque-781909222" target="_blank">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
-        </a>
-        <a href="https://github.com/RehanHQ" target="_blank">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
-        </a>
-        <a href="https://leetcode.com/u/RehanHaque/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="leetcode-icon" />
-        </a>
-      </div>
-    </nav>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm a BTech CSE (AI) student with real-world skills in full-stack development, machine learning, and backend systems.
-      Passionate about solving problems through clean code and clever solutions.
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Python</li>
-      <li>PHP & MySQL</li>
-      <li>Java</li>
-      <li>REST APIs</li>
-      <li>Machine Learning</li>
-      <li>Object Detection</li>
-      <li>NLP</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul class="projects-list">
-      <li><strong>Employee Exam System:</strong> Full-stack app using PHP & MySQL for conducting exams.</li>
-      <li><strong>Sign Language to Speech Converter:</strong> Real-time object detection & translation.</li>
-      <li><strong>AI Homework Helper:</strong> NLP chatbot assistant for student queries.</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-info">
-      <p>📞 <a href="tel:+919932625611">+91 99326 25611</a></p>
-      <p>📧 <a href="mailto:rehanhaque@shooliniuniversity.com">rehanhaque@shooliniuniversity.com</a></p>
-      <p>📄 <a href="#">Download Resume</a></p>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-content fade-in">
+      <h1>Hi, I'm <span>Rehan Haque</span></h1>
+      <p>Aspiring Full-Stack & AI Engineer</p>
+      <a href="#about" class="cta-button">View My Work</a>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Rehan Haque. All rights reserved.</p>
-  </footer>
+  <!-- NAVIGATION -->
+  <header>
+    <div class="logo">Rehan Haque</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="social-icons">
+      <a href="https://linkedin.com/in/rehan-haque-781909222" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/RehanHQ" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+      </a>
+      <a href="https://leetcode.com/u/RehanHaque/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="leetcode-icon" />
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section id="about" class="section fade-in">
+      <h1>About Me</h1>
+      <p>I'm a BTech CSE (AI) student with real-world experience in full-stack development, machine learning, and backend systems. I love solving real-world problems with clean and efficient code.</p>
+    </section>
+
+    <section id="skills" class="section fade-in">
+      <h1>Skills</h1>
+      <div class="skills-grid">
+        <span>Python</span>
+        <span>PHP & MySQL</span>
+        <span>Java</span>
+        <span>REST APIs</span>
+        <span>HTML & CSS</span>
+        <span>JavaScript</span>
+        <span>Machine Learning</span>
+      </div>
+    </section>
+
+    <section id="projects" class="section fade-in">
+      <h1>Projects</h1>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Employee Exam System</h3>
+          <p>Online testing system with dashboard, login, result panel built using PHP and MySQL.</p>
+        </div>
+        <div class="project-card">
+          <h3>Sign Language to Speech</h3>
+          <p>Real-time gesture to voice translator using OpenCV and CNN.</p>
+        </div>
+        <div class="project-card">
+          <h3>EduGPT - AI Homework Helper</h3>
+          <p>Upload notes and ask questions offline using embeddings and natural language.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section fade-in">
+      <h1>Contact</h1>
+      <p><strong>Phone:</strong> <a href="tel:+919932625611">+91 99326 25611</a></p>
+      <p><strong>Email:</strong> <a href="mailto:rehanhaque@shooliniuniversity.com">rehanhaque@shooliniuniversity.com</a></p>
+      <p><strong>Resume:</strong> <a href="#">Download Resume</a></p>
+    </section>
+  </main>
+
 </body>
 </html>
