@@ -10,6 +10,47 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #111;
+      color: white;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.light-theme {
+      background-color: white;
+      color: black;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0c0c0c;
+    }
+    header h1 {
+      color: #00aaff;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    nav a {
+      color: inherit;
+      text-decoration: none;
+      margin: 0 0.75rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00aaff;
+    }
+    .socials {
+      margin-left: 1rem;
+    }
+    .socials a {
+      margin-left: 0.5rem;
+    }
     .theme-toggle {
       cursor: pointer;
       background: #00aaff;
@@ -18,17 +59,10 @@
       padding: 5px 10px;
       border-radius: 5px;
       font-size: 0.9rem;
+      margin-left: 1rem;
     }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav a {
-        margin-bottom: 0.5rem;
-      }
+    #typed-text {
+      color: #00aaff;
     }
   </style>
 </head>
@@ -36,20 +70,22 @@
   <header>
     <h1>Rehan Haque</h1>
     <nav>
-      <a href="https://www.linkedin.com/in/rehan-haque-781909222/" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/20/00aaff/linkedin.png" alt="LinkedIn" />
-      </a>
-      <a href="https://github.com/RehanHQ" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/20/00aaff/github.png" alt="GitHub" />
-      </a>
-      <a href="https://leetcode.com/u/RehanHaque/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="width: 20px; height: 20px;" />
-      </a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
       <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/rehan-haque-781909222/" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/20/00aaff/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/RehanHQ" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/20/00aaff/github.png" alt="GitHub" />
+        </a>
+        <a href="https://leetcode.com/u/RehanHaque/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="width: 20px; height: 20px;" />
+        </a>
+      </div>
     </nav>
   </header>
 
