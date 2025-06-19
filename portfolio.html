@@ -2,38 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rehan Haque - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rehan Haque | Portfolio</title>
   <link rel="stylesheet" href="portfolio.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <h1>Rehan Haque</h1>
-    <nav>
+    <div class="left">Rehan Haque</div>
+    <nav class="center">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <div class="socials">
-        <a href="https://linkedin.com/in/rehan-haque-781909222" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin fa-lg" style="color:#0e76a8;"></i>
-        </a>
-        <a href="https://github.com/RehanHQ" target="_blank" title="GitHub">
-          <i class="fab fa-github fa-lg" style="color:white;"></i>
-        </a>
-        <a href="https://leetcode.com/u/RehanHaque/" target="_blank" title="LeetCode">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="height:18px; vertical-align:middle;">
-        </a>
-      </div>
     </nav>
+    <div class="right socials">
+      <a href="https://linkedin.com/in/rehan-haque-781909222" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/RehanHQ" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://leetcode.com/u/RehanHaque/" target="_blank" title="LeetCode">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="leetcode-icon" />
+      </a>
+    </div>
   </header>
 
-  <div class="container">
+  <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>I'm a BTech CSE (AI) student with practical experience in machine learning, NLP, full-stack systems, and backend development. I enjoy building things that matter.</p>
+      <p>I’m a BTech CSE (AI) student with hands-on experience in full-stack development, machine learning, and NLP. I enjoy solving real-world problems with tech.</p>
     </section>
 
     <section id="skills">
@@ -43,6 +43,10 @@
         <li>PHP & MySQL</li>
         <li>Java</li>
         <li>REST APIs</li>
+        <li>Machine Learning</li>
+        <li>Deep Learning</li>
+        <li>HTML & CSS</li>
+        <li>Git & GitHub</li>
       </ul>
     </section>
 
@@ -50,11 +54,11 @@
       <h2>Projects</h2>
       <div class="project">
         <h3>Employee Exam System</h3>
-        <p>Built with PHP and MySQL, including login, dashboard, exam module, and results.</p>
+        <p>A web-based exam platform built with PHP and MySQL featuring login, dashboard, exam-taking, and results.</p>
       </div>
       <div class="project">
         <h3>AI Homework Helper</h3>
-        <p>NLP-powered chatbot to help students with academic queries.</p>
+        <p>An NLP chatbot using trained embeddings to help students get academic support instantly.</p>
       </div>
     </section>
 
@@ -63,10 +67,10 @@
       <div class="contact-icons">
         <a href="tel:+919932625611"><i class="fas fa-phone"></i> +91 99326 25611</a>
         <a href="mailto:rehanhaque@shooliniuniversity.com"><i class="fas fa-envelope"></i> rehanhaque@shooliniuniversity.com</a>
-        <a href="Rehan_Haque_Resume.pdf" download><i class="fas fa-file-alt"></i> Download Resume</a>
+        <a href="resume.pdf" download><i class="fas fa-file-alt"></i> Resume</a>
       </div>
     </section>
-  </div>
+  </main>
 
   <footer>
     <p>&copy; 2025 Rehan Haque</p>
