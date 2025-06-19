@@ -49,17 +49,22 @@ body {
   list-style: none;
   align-items: center;
   margin-left: 1.5rem;
+  padding: 0;
 }
 
-.social-icons li img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1);
+.social-icons li a {
+  display: inline-block;
   transition: transform 0.3s ease;
 }
 
-.social-icons li a:hover img {
+.social-icons li a:hover {
   transform: scale(1.2);
+}
+
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
 }
 
 .hero {
