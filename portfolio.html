@@ -1,58 +1,65 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rehan Haque | Portfolio</title>
-  <link rel="stylesheet" href="portfolio.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <button id="theme-toggle">🌓</button>
+  <nav class="navbar">
+    <div class="logo">Rehan Haque</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <header data-aos="fade-down">
+  <header class="hero">
     <h1><span class="typewriter"></span></h1>
     <p>AI Engineer | Full-Stack Developer | ML Enthusiast</p>
   </header>
 
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>I’m a BTech CSE (AI) student with practical experience in machine learning, NLP, full-stack systems, and backend development. I enjoy building things that matter.</p>
+    <p>I’m a BTech CSE (AI) student passionate about AI, backend systems, and building intuitive applications. I love solving real-world problems with tech.</p>
   </section>
 
-  <section id="skills" data-aos="fade-left">
+  <section id="skills" data-aos="fade-up">
     <h2>Skills</h2>
-    <div class="skill"><label>Python</label><div class="bar"><span style="width: 90%;"></span></div></div>
-    <div class="skill"><label>PHP & MySQL</label><div class="bar"><span style="width: 85%;"></span></div></div>
-    <div class="skill"><label>Java</label><div class="bar"><span style="width: 75%;"></span></div></div>
-    <div class="skill"><label>REST APIs</label><div class="bar"><span style="width: 80%;"></span></div></div>
+    <div class="skills-grid">
+      <div class="skill-card">Python</div>
+      <div class="skill-card">PHP & MySQL</div>
+      <div class="skill-card">Java</div>
+      <div class="skill-card">REST APIs</div>
+      <div class="skill-card">Machine Learning</div>
+      <div class="skill-card">NLP</div>
+    </div>
   </section>
 
-  <section id="projects" data-aos="zoom-in">
+  <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
-    <div class="project">
-      <img src="project1.png" alt="Employee Exam System">
-      <div>
+    <div class="projects-grid">
+      <div class="project-card">
         <h3>Employee Exam System</h3>
-        <p>Test platform built with PHP, MySQL, login dashboard, and result generation.</p>
+        <p>A PHP & MySQL app to manage employee assessments with login and result tracking.</p>
       </div>
-    </div>
-    <div class="project">
-      <img src="project2.png" alt="AI Homework Helper">
-      <div>
+      <div class="project-card">
         <h3>AI Homework Helper</h3>
-        <p>NLP chatbot trained to help students with their academic doubts using embeddings.</p>
+        <p>NLP-based chatbot for helping students solve academic queries intelligently.</p>
+      </div>
+      <div class="project-card">
+        <h3>Object Detection App</h3>
+        <p>Mobile app using deep learning to detect and label items in real-time camera feed.</p>
       </div>
     </div>
   </section>
 
-  <section id="resume" data-aos="fade-up">
-    <h2>Resume</h2>
-    <a class="button" href="Rehan_Haque_Resume.pdf" download>📄 Download Resume</a>
-  </section>
-
-  <section id="contact" data-aos="fade-right">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
@@ -62,27 +69,15 @@
     </form>
   </section>
 
-  <footer data-aos="fade-up">
-    <p>Made with ❤️ by Rehan Haque © 2025</p>
+  <footer>
+    <p>© 2025 Rehan Haque. All rights reserved.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1000, once: true });
-
-    const toggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-    toggle.addEventListener('click', () => {
-      const current = html.getAttribute('data-theme');
-      const next = current === 'light' ? 'dark' : 'light';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    html.setAttribute('data-theme', savedTheme);
-
-    const typewriter = document.querySelector('.typewriter');
+    AOS.init();
     const text = "Hi, I'm Rehan Haque.";
+    const typewriter = document.querySelector(".typewriter");
     let i = 0;
     function typing() {
       if (i < text.length) {
