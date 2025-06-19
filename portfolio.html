@@ -6,21 +6,22 @@
   <title>Rehan Haque | Portfolio</title>
   <link rel="stylesheet" href="portfolio.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
   <button id="theme-toggle">🌓</button>
 
-  <header>
-    <h1>Rehan Haque</h1>
+  <header data-aos="fade-down">
+    <h1><span class="typewriter"></span></h1>
     <p>AI Engineer | Full-Stack Developer | ML Enthusiast</p>
   </header>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>I’m a BTech CSE (AI) student with practical experience in machine learning, NLP, full-stack systems, and backend development. I enjoy building things that matter.</p>
   </section>
 
-  <section id="skills">
+  <section id="skills" data-aos="fade-left">
     <h2>Skills</h2>
     <div class="skill"><label>Python</label><div class="bar"><span style="width: 90%;"></span></div></div>
     <div class="skill"><label>PHP & MySQL</label><div class="bar"><span style="width: 85%;"></span></div></div>
@@ -28,7 +29,7 @@
     <div class="skill"><label>REST APIs</label><div class="bar"><span style="width: 80%;"></span></div></div>
   </section>
 
-  <section id="projects">
+  <section id="projects" data-aos="zoom-in">
     <h2>Projects</h2>
     <div class="project">
       <img src="project1.png" alt="Employee Exam System">
@@ -46,12 +47,12 @@
     </div>
   </section>
 
-  <section id="resume">
+  <section id="resume" data-aos="fade-up">
     <h2>Resume</h2>
     <a class="button" href="Rehan_Haque_Resume.pdf" download>📄 Download Resume</a>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-right">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
@@ -61,11 +62,14 @@
     </form>
   </section>
 
-  <footer>
+  <footer data-aos="fade-up">
     <p>Made with ❤️ by Rehan Haque © 2025</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
+    AOS.init({ duration: 1000, once: true });
+
     const toggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
     toggle.addEventListener('click', () => {
@@ -76,6 +80,18 @@
     });
     const savedTheme = localStorage.getItem('theme') || 'light';
     html.setAttribute('data-theme', savedTheme);
+
+    const typewriter = document.querySelector('.typewriter');
+    const text = "Hi, I'm Rehan Haque.";
+    let i = 0;
+    function typing() {
+      if (i < text.length) {
+        typewriter.textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, 100);
+      }
+    }
+    typing();
   </script>
 </body>
 </html>
