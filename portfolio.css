@@ -64,7 +64,11 @@ body {
 .social-icons svg {
   width: 24px;
   height: 24px;
-  fill: #ffffff;
+  transition: transform 0.3s;
+}
+
+.social-icons li a:hover svg {
+  transform: scale(1.2);
 }
 
 .hero {
