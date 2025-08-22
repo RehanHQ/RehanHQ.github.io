@@ -164,6 +164,28 @@ header {
   background: #222;
 }
 
+/* PROJECT LINKS (buttons under projects) */
+.project-links {
+  margin-top: 1rem;
+}
+
+.project-links a {
+  display: inline-block;
+  margin-right: 0.8rem;
+  padding: 0.6rem 1.2rem;
+  background: #00aaff;
+  color: #000;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-links a:hover {
+  background: #0099dd;
+  transform: scale(1.05);
+}
+
 /* CONTACT */
 .section a {
   color: #00aaff;
