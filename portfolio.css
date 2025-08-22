@@ -55,17 +55,6 @@ body {
   transform: scale(1.05);
 }
 
-/* PROFILE PHOTO */
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 3px solid #00aaff;
-  box-shadow: 0 0 12px rgba(0, 170, 255, 0.5);
-}
-
 /* HEADER */
 header {
   background-color: #121212;
@@ -95,6 +84,26 @@ header {
   color: #00aaff;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* CORNER PROFILE PIC */
+.corner-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00aaff;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.corner-pic:hover {
+  transform: scale(1.1);
+}
+
 /* SOCIAL ICONS */
 .social-icons {
   display: flex;
@@ -107,7 +116,7 @@ header {
 
 .social-icons a img {
   height: 26px;
-  margin-left: 1rem;
+  margin-left: 0.8rem;
   transition: transform 0.3s ease, filter 0.3s ease;
   filter: grayscale(100%) brightness(2);
 }
@@ -246,18 +255,19 @@ header {
     margin-top: 0.8rem;
   }
 
-  .social-icons {
-    align-self: flex-end;
-    margin-top: 1rem;
+  .header-right {
+    margin-top: 0.8rem;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .hero-content h1 {
     font-size: 2rem;
   }
 
-  .profile-pic {
-    width: 120px;
-    height: 120px;
+  .corner-pic {
+    width: 40px;
+    height: 40px;
   }
 }
 
