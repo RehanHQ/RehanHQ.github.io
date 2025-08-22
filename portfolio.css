@@ -55,6 +55,17 @@ body {
   transform: scale(1.05);
 }
 
+/* PROFILE PHOTO */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #00aaff;
+  box-shadow: 0 0 12px rgba(0, 170, 255, 0.5);
+}
+
 /* HEADER */
 header {
   background-color: #121212;
@@ -242,6 +253,11 @@ header {
 
   .hero-content h1 {
     font-size: 2rem;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
   }
 }
 
